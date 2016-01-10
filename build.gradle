@@ -1,12 +1,13 @@
 /*
  * Master Gradle build script
  *
- * Depends on bndPlugin property set by settings.gradle.
- * and bnd_* values from gradle.properties.
+ * Depends on bndWorkspace and bndURI properties set by settings.gradle.
  */
 
 import aQute.bnd.build.Workspace
 import aQute.bnd.osgi.Constants
+import org.osgi.service.indexer.*
+import org.osgi.service.indexer.impl.*
 
 /* Add bnd gradle plugin as a script dependency */
 buildscript {
@@ -22,7 +23,7 @@ ext.bndWorkspace = new Workspace(rootDir, bnd_cnf)
 if (bndWorkspace == null) {
   throw new GradleException("Unable to load workspace ${rootDir}/${bnd_cnf}")
 }
-
+logging.captureStandardOutput LogLevel.INFO
 ext.cnf = rootProject.project(bnd_cnf)
 
 /* Configure the subprojects */
@@ -32,3 +33,4 @@ subprojects {
     plugins.apply 'biz.aQute.bnd'
   }
 }
+
