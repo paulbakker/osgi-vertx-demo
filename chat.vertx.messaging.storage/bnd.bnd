@@ -1,0 +1,8 @@
+-buildpath: \
+	../cnf/plugins/org.apache.felix.dependencymanager.annotation.jar;version=file,\
+	io.reactivex.rxjava,\
+	chat.vertx.bootstrap;version=latest,\
+	io.vertx.core;version=3.2,\
+	chat.api;version=latest,\
+	chat.vertx.mongo;version=latest
+-sub: *.bnd

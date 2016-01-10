@@ -1,0 +1,5 @@
+-buildpath: \
+	../cnf/plugins/org.apache.felix.dependencymanager.annotation.jar;version=file,\
+	chat.vertx.bootstrap;version=latest,\
+	io.vertx.core;version=3.2
+Private-Package: chat.vertx.sockjs

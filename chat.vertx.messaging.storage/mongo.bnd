@@ -1,0 +1,2 @@
+Private-Package: chat.vertx.messaging.storage.mongo
+Export-Package: chat.vertx.messaging.storage

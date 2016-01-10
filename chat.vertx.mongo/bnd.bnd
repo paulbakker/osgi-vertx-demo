@@ -1,0 +1,20 @@
+Include-Resource: \
+	@lib/vertx-mongo-client-3.2.0.jar
+	
+-buildpath: \
+	../cnf/plugins/org.apache.felix.dependencymanager.annotation.jar;version=file,\
+	lib/vertx-mongo-client-3.2.0.jar;version=file,\
+	chat.vertx.bootstrap;version=latest,\
+	io.vertx.core;version=3.2
+Private-Package: chat.vertx.mongo.connection
+Export-Package: \
+	chat.vertx.mongo,\
+	io.vertx.ext.mongo,\
+	io.vertx.rxjava.ext.mongo
+Import-Package: \
+	groovy.lang;resolution:=optional,\
+	org.codehaus.groovy.*;resolution:=optional,\
+	io.vertx.lang.groovy;resolution:=optional,\
+	io.vertx.groovy.core;resolution:=optional,\
+	io.vertx.codegen.annotations;resolution:=optional,\
+	*
