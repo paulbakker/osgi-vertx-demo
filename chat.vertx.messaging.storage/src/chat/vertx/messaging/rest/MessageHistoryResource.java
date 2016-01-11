@@ -14,7 +14,7 @@ import io.vertx.rxjava.ext.web.Route;
 import io.vertx.rxjava.ext.web.Router;
 
 @Component
-public class RoomsResource {
+public class MessageHistoryResource {
 	
 	@ServiceDependency
 	private volatile Router router;
